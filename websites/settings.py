@@ -131,6 +131,3 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, "static"),
 )
-
-
-from config.setting_local import *
