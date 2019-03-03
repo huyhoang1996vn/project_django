@@ -9,3 +9,6 @@ public/*
 
 !public/media/
 public/media/*
+
+log_uwsgi.txt
+*.sock

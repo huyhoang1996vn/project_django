@@ -118,16 +118,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT is the folder where static files will be stored after using manage.py collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
 
+# MEDIA_ROOT is the folder where files uploaded using FileField will go.
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'public', 'media')
 
-STATIC_ROOT_PATH = os.path.join(BASE_DIR, "static")
-
+# STATICFILES_DIRS is the list of folders where Django will search for additional static files aside from the static folder of each app installed
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, "static"),
 )
