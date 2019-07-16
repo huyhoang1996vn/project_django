@@ -21,12 +21,13 @@ DEFAULT_FROM_EMAIL = "VocSach Service <no-reply@vocsach.vn>"
 '''
     Step 1: add your domain to sender authentication
     Step 2: in your domain, add subdomain from step 1
-    Step 3: Set default for subdomain created
+    Step 3: Create api key
+    Step 4: Set default for subdomain created
 
 '''
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
