@@ -2,17 +2,17 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from app.tasks import add_app
-from main.tasks import add_main
-
+from app.tasks import count_time, on_result_ready
+from celery.result import ResultBase
 # Create your views here.
 
 def home(request):
     print "***START Power Card Introduction PAGE***"
 
-    add_app.delay(10)
-    add_main.delay()
-
+    # result = count_time.delay(10)
+    # call other task for done DB
+    result = count_time.apply_async((10,), link=on_result_ready.s())
+    print 'result ', result
     # try:
     return render(request, 'websites/home.html')
     # except Exception, e:
